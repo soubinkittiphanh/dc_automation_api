@@ -2117,3 +2117,21 @@
 {"level":"info","message":"app is runing: 3000","timestamp":"2024-01-16T09:03:39.880Z"}
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-16T09:03:39.881Z"}
 {"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-01-16T09:03:40.888Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-17T07:51:05.073Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-17T07:51:05.075Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-17T07:51:05.076Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-17T07:51:05.076Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-17T07:51:05.076Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-17T07:51:05.619Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-17T07:51:05.620Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-17T07:51:05.621Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1004ms","timestamp":"2024-01-17T07:51:06.620Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-17T07:53:49.352Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-17T07:53:49.355Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-17T07:53:49.355Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-17T07:53:49.356Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-17T07:53:49.356Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-17T07:53:49.805Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-17T07:53:49.806Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-17T07:53:49.807Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-01-17T07:53:50.805Z"}

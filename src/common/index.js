@@ -201,5 +201,6 @@ const linuxExecSample = (command, processTitle) => {
 module.exports = {
     createApiDirectory,
     createAppDirectory,
-    createSupervisorcltConfigFile
+    createSupervisorcltAPIConfigFile,
+    createSupervisorcltAPPConfigFile
 }

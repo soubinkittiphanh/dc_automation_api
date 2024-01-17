@@ -65,7 +65,6 @@ const service = {
                         apiPort,
                 
                     }
-                    commonService.createSupervisorcltConfigFile(companyInfo)
                     return newUser
                 })
                 return result;
