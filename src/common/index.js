@@ -96,7 +96,7 @@ const createAppDirectory = async (user) => {
 
 const createSupervisorcltAPIConfigFile = (portNumber, directory) => {
     logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
-    const filePath = path.join(path_production, `api_auto_${portNumber}.conf`);
+    const filePath = path.join(`${path_production}/config/supervisor/`, `api_auto_${portNumber}.conf`);
     const fileContent = `[program:api_${portNumber}]
     command=/root/.nvm/versions/node/v16.20.2/bin/node /root/api/${directory}/src/index.js
     environment=PORT=${portNumber}
@@ -131,7 +131,7 @@ const createSupervisorcltAPIConfigFile = (portNumber, directory) => {
 }
 const createSupervisorcltAPPConfigFile = (portNumber, directory) => {
     logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
-    const filePath = path.join(path_production, `app_auto_${portNumber}.conf`);
+    const filePath = path.join(`${path_production}/config/supervisor`, `app_auto_${portNumber}.conf`);
     const fileContent = `[program:web_${portNumber}]
     environment=PORT=${portNumber}
     command=/bin/bash -c "export PATH=/root/.nvm/versions/node/v16.20.2/bin:$PATH && npm run build && npm run start"
