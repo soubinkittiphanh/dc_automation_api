@@ -65,21 +65,21 @@ const createAppDirectory = async (user) => {
 
     // Example: update db connection config file
     // file content predefine 
-    const fileContent = `
-    const clientDB = {
-        "auto": {
-            "host": "150.95.31.23",
-            "user": "root",
-            "password": "sdat@3480",
-            "database": "${generatedDb}",
-            "port": 3306,
-        },
-    }
-    module.exports = {
-        clientDB,
-    }`
+    // const fileContent = `
+    // const clientDB = {
+    //     "auto": {
+    //         "host": "150.95.31.23",
+    //         "user": "root",
+    //         "password": "sdat@3480",
+    //         "database": "${generatedDb}",
+    //         "port": 3306,
+    //     },
+    // }
+    // module.exports = {
+    //     clientDB,
+    // }`
     // ***** Create dbConfig.js file in node project
-    createDynamicFile(fileContent, api_home_path_final)
+    // createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
     createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
@@ -88,7 +88,7 @@ const createAppDirectory = async (user) => {
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add web_dc_${user.apiPort.port}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add web_${user.apiPort.port}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
 
