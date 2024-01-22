@@ -13,7 +13,7 @@ const createApiDirectory = (user) => {
     const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
 
     linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create api directory`);
-    linuxExecSample(`cp -r ${api_draft_path}/src/* ${api_home_path}/dc_${user.profileId}`, `Copy api project to directory api`);
+    linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy api project to directory api`);
     const command = `mysql -u root -e "CREATE DATABASE ${generatedDb};"`;
     linuxExecSample(command, `Create mariadb database`);
 
@@ -58,7 +58,7 @@ const createAppDirectory = (user) => {
     const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
 
     linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create app directory`);
-    linuxExecSample(`cp -r ${api_draft_path}/src/* ${api_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
+    linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
 
     // Example: update db connection config file
     // file content predefine 
