@@ -141,6 +141,8 @@ const createSupervisorcltAPPConfigFile = (portNumber, directory, apiPort) => {
     environment=API_PORT=${apiPort}
     environment=PORT=${portNumber}
     command=/bin/bash -c "export PATH=/root/.nvm/versions/node/v16.20.2/bin:$PATH && npm run build && npm run start"
+    environment=API_PORT=${apiPort}
+    environment=PORT=${portNumber}
     autostart=true
     startsecs=10
     autorestart=true
