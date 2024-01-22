@@ -1,9 +1,12 @@
-const { exec } = require('child_process');
+// const { exec } = require('child_process');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+
 const logger = require('../api/logger');
 const fs = require('fs');
 const path = require('path');
 const path_production = `/root` //Production
-const createApiDirectory = (user) => {
+const createApiDirectory = async (user) => {
 
     // Example: Create a new directory using 'mkdir' command
 
@@ -12,10 +15,10 @@ const createApiDirectory = (user) => {
     const generatedDb = `dcommerce_pro_auto_${user.profileId}`
     const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
 
-    linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create api directory`);
-    linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy api project to directory api`);
+    await linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create api directory`);
+    await linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy api project to directory api`);
     const command = `mysql -u root -e "CREATE DATABASE ${generatedDb};"`;
-    linuxExecSample(command, `Create mariadb database`);
+    await linuxExecSample(command, `Create mariadb database`);
 
     // Example: update db connection config file
     // file content predefine 
@@ -33,23 +36,23 @@ const createApiDirectory = (user) => {
         clientDB,
     }`
     // ***** Create dbConfig.js file in node project
-    createDynamicFile(fileContent, api_home_path_final) 
+    createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPIConfigFile(user.apiPort,`dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPIConfigFile(user.apiPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
-    linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
+    await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    linuxExecSample(`supervisorctl add api_${user.apiPort}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add api_${user.apiPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
 
 }
-const createAppDirectory = (user) => {
+const createAppDirectory = async (user) => {
 
-    
+
     // Example: Create a new directory using 'mkdir' command
 
     const api_draft_path = `/root/app/dc_app_draft`
@@ -57,8 +60,8 @@ const createAppDirectory = (user) => {
     const generatedDb = `dcommerce_pro_auto_${user.profileId}`
     const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
 
-    linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create app directory`);
-    linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
+    await linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create app directory`);
+    await linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
 
     // Example: update db connection config file
     // file content predefine 
@@ -76,22 +79,23 @@ const createAppDirectory = (user) => {
         clientDB,
     }`
     // ***** Create dbConfig.js file in node project
-    createDynamicFile(fileContent, api_home_path_final) 
+    createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPPConfigFile(user.appPort,`dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPPConfigFile(user.appPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
-    linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
+    await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    linuxExecSample(`supervisorctl add web_dc_${user.apiPort}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add web_dc_${user.apiPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
 
 }
 
 const createSupervisorcltAPIConfigFile = (portNumber, directory) => {
+    logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
     const filePath = path.join(path_production, `api_auto_${portNumber}.conf`);
     const fileContent = `[program:api_${portNumber}]
     command=/root/.nvm/versions/node/v16.20.2/bin/node /root/api/${directory}/src/index.js
@@ -126,6 +130,7 @@ const createSupervisorcltAPIConfigFile = (portNumber, directory) => {
 
 }
 const createSupervisorcltAPPConfigFile = (portNumber, directory) => {
+    logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
     const filePath = path.join(path_production, `app_auto_${portNumber}.conf`);
     const fileContent = `[program:web_${portNumber}]
     environment=PORT=${portNumber}
@@ -182,20 +187,35 @@ const createDynamicFile = (fileContent, filePath) => {
     });
 
 }
-const linuxExecSample = (command, processTitle) => {
-    exec(command, (error, stdout, stderr) => {
-        if (error) {
-            logger.error(`Cannot ${processTitle} Error: ${error.message}`);
-            return;
-        }
+// const linuxExecSample = (command, processTitle) => {
+//     exec(command, (error, stdout, stderr) => {
+//         if (error) {
+//             logger.error(`Cannot ${processTitle} Error: ${error.message}`);
+//             return;
+//         }
+//         if (stderr) {
+//             logger.error(`${processTitle} stderr: ${stderr}`);
+//             return;
+//         }
+//         logger.warn(`${processTitle} execute successfully: ${stdout}`);
+//     });
+
+// }
+
+
+const linuxExecSample = async (command, processTitle) => {
+    try {
+        const { stdout, stderr } = await exec(command);
         if (stderr) {
             logger.error(`${processTitle} stderr: ${stderr}`);
             return;
         }
         logger.warn(`${processTitle} execute successfully: ${stdout}`);
-    });
+    } catch (error) {
+        logger.error(`Cannot ${processTitle} Error: ${error.message}`);
+    }
+};
 
-}
 
 
 module.exports = {
