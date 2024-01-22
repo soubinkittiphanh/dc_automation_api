@@ -2286,3 +2286,14 @@
 {"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T06:01:55.860Z"}
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T06:01:55.861Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T06:01:56.851Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T06:02:01.515Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T06:10:52.172Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T06:10:52.174Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T06:10:52.175Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T06:10:52.175Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T06:10:52.176Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T06:10:52.610Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T06:10:52.611Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T06:10:52.611Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T06:10:53.570Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T06:10:58.091Z"}

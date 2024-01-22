@@ -45,7 +45,7 @@ const createApiDirectory = async (user) => {
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add api_${user.apiPort}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add api_${user.apiPort.port}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
 
@@ -88,7 +88,7 @@ const createAppDirectory = async (user) => {
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add web_dc_${user.apiPort}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add web_dc_${user.apiPort.port}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
 
