@@ -87,7 +87,7 @@ const service = {
                     include: [
                         {
                             model: AppPort,
-                            as: 'appport',
+                            as: 'appports',
                         },
                     ],
                 },]

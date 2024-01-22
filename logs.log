@@ -2188,3 +2188,13 @@
 {"level":"warn","message":"User created {\"id\":2,\"profileId\":\"manual\",\"profileName\":\"manual\",\"profileProvider\":\"manual\",\"isActive\":true,\"updateTimestamp\":\"2024-01-22T03:48:10.361Z\",\"createdAt\":\"2024-01-22T03:48:10.361Z\"}","timestamp":"2024-01-22T03:48:11.180Z"}
 {"level":"info","message":"Create new user completed","timestamp":"2024-01-22T03:48:11.180Z"}
 {"level":"error","message":"Cannot Create mariadb database Error: Command failed: mysql -u root -e \"CREATE DATABASE dcommerce_pro_auto_manual;\"\nERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)\n","timestamp":"2024-01-22T03:48:11.652Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T04:20:28.531Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T04:20:28.534Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T04:20:28.535Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T04:20:28.536Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T04:20:28.537Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T04:20:29.029Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T04:20:29.030Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T04:20:29.031Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T04:20:30.032Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T04:20:34.426Z"}
