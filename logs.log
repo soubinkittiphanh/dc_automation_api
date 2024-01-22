@@ -2135,3 +2135,56 @@
 {"level":"info","message":"app is runing: 3000","timestamp":"2024-01-17T07:53:49.806Z"}
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-17T07:53:49.807Z"}
 {"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-01-17T07:53:50.805Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T03:44:13.168Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T03:44:13.171Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T03:44:13.171Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T03:44:13.171Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T03:44:13.173Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T03:44:13.883Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T03:44:13.884Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T03:44:13.885Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T03:44:14.956Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T03:44:19.717Z"}
+{"level":"info","message":"Facebook authenthicating...","timestamp":"2024-01-22T03:44:56.952Z"}
+{"level":"info","message":"USER undefined","timestamp":"2024-01-22T03:44:56.958Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T03:47:34.612Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T03:47:34.614Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T03:47:34.615Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T03:47:34.615Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T03:47:34.616Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T03:47:35.294Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T03:47:35.295Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T03:47:35.296Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T03:47:36.325Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T03:47:40.497Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T03:47:40.499Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T03:47:40.500Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T03:47:40.500Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T03:47:40.501Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T03:47:40.913Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T03:47:40.914Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T03:47:40.915Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T03:47:41.853Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T03:47:45.947Z"}
+{"level":"info","message":"Facebook authenthicating...","timestamp":"2024-01-22T03:48:10.237Z"}
+{"level":"info","message":"USER {\"id\":\"manual\",\"displayName\":\"manual\",\"provider\":\"manual\",\"isActive\":true}","timestamp":"2024-01-22T03:48:10.247Z"}
+{"level":"info","message":"User profile id #manual","timestamp":"2024-01-22T03:48:10.251Z"}
+{"level":"error","message":"User not found with profileId manual, error SequelizeEagerLoadingError: app_port is associated to company_profile using an alias. You've included an alias (appport), but it does not match the alias(es) defined in your association (appports).","timestamp":"2024-01-22T03:48:10.274Z"}
+{"level":"info","message":"User not yet registered, creating new user","timestamp":"2024-01-22T03:48:10.276Z"}
+{"level":"warn","message":"Company profile data \n{\"companyName\":\"Dummy\",\"companyEmail\":\"Dummy email\",\"companyTelephone\":\"Dummy phone\",\"systemPackage\":\"FREE\",\"apiLink\":\"Dummy link api\",\"appLink\":\"Dummy link app\",\"appPort\":3902,\"apiPort\":8902,\"db\":\"DummyDB\",\"isActive\":true,\"userId\":2}","timestamp":"2024-01-22T03:48:10.636Z"}
+{"level":"info","message":"Finall appport: 3902 apiport: 8902","timestamp":"2024-01-22T03:48:10.885Z"}
+{"level":"error","message":"Error creating file /root/api/dc_manual/src/config/dbClient.js: ENOENT: no such file or directory, open '/root/api/dc_manual/src/config/dbClient.js'","timestamp":"2024-01-22T03:48:11.089Z"}
+{"level":"error","message":"Error creating file: ENOENT: no such file or directory, open '/root/api_auto_[object SequelizeInstance:app_port].conf'","timestamp":"2024-01-22T03:48:11.095Z"}
+{"level":"error","message":"Error creating file /root/app/dc_manual/src/config/dbClient.js: ENOENT: no such file or directory, open '/root/app/dc_manual/src/config/dbClient.js'","timestamp":"2024-01-22T03:48:11.095Z"}
+{"level":"error","message":"Error creating file: ENOENT: no such file or directory, open '/root/app_auto_[object SequelizeInstance:app_port].conf'","timestamp":"2024-01-22T03:48:11.096Z"}
+{"level":"error","message":"Cannot start new service just added from new config file Error: Command failed: supervisorctl add web_dc_[object SequelizeInstance:app_port]\n/bin/sh: supervisorctl: command not found\n","timestamp":"2024-01-22T03:48:11.102Z"}
+{"level":"error","message":"Cannot read config file in supervisor config path Error: Command failed: supervisorctl reread\n/bin/sh: supervisorctl: command not found\n","timestamp":"2024-01-22T03:48:11.105Z"}
+{"level":"error","message":"Cannot Copy draft app project to directory app Error: Command failed: cp -r /root/app/dc_app_draft/src/* /root/app/dc_manual\ncp: /root/app/dc_app_draft/src/*: No such file or directory\n","timestamp":"2024-01-22T03:48:11.106Z"}
+{"level":"error","message":"Cannot Create app directory Error: Command failed: mkdir -p /root/app/dc_manual\nmkdir: /root: Read-only file system\n","timestamp":"2024-01-22T03:48:11.106Z"}
+{"level":"error","message":"Cannot start new service just added from new config file Error: Command failed: supervisorctl add api_[object SequelizeInstance:app_port]\n/bin/sh: supervisorctl: command not found\n","timestamp":"2024-01-22T03:48:11.106Z"}
+{"level":"error","message":"Cannot read config file in supervisor config path Error: Command failed: supervisorctl reread\n/bin/sh: supervisorctl: command not found\n","timestamp":"2024-01-22T03:48:11.106Z"}
+{"level":"error","message":"Cannot Copy api project to directory api Error: Command failed: cp -r /root/api/dc_api_draft/src/* /root/api/dc_manual\ncp: /root/api/dc_api_draft/src/*: No such file or directory\n","timestamp":"2024-01-22T03:48:11.106Z"}
+{"level":"error","message":"Cannot Create api directory Error: Command failed: mkdir -p /root/api/dc_manual\nmkdir: /root: Read-only file system\n","timestamp":"2024-01-22T03:48:11.107Z"}
+{"level":"warn","message":"User created {\"id\":2,\"profileId\":\"manual\",\"profileName\":\"manual\",\"profileProvider\":\"manual\",\"isActive\":true,\"updateTimestamp\":\"2024-01-22T03:48:10.361Z\",\"createdAt\":\"2024-01-22T03:48:10.361Z\"}","timestamp":"2024-01-22T03:48:11.180Z"}
+{"level":"info","message":"Create new user completed","timestamp":"2024-01-22T03:48:11.180Z"}
+{"level":"error","message":"Cannot Create mariadb database Error: Command failed: mysql -u root -e \"CREATE DATABASE dcommerce_pro_auto_manual;\"\nERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)\n","timestamp":"2024-01-22T03:48:11.652Z"}

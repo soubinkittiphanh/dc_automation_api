@@ -3,6 +3,13 @@ const logger = require('../api/logger');
 const userService = require('../user').service
 const authenticate = async (req, res) => {
     logger.info(`Facebook authenthicating...`)
+    req.user = {
+        id: 'manual',
+        displayName: 'manual',
+        provider: 'manual',
+        isActive: true,
+
+    }
     logger.info(`USER ${JSON.stringify(req.user)}`)
     if (req.user) {
         //********** Check if already user registration completed or not ********* */

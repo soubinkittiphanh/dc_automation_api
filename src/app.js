@@ -56,6 +56,7 @@ const buildApp = async () => {
     });
     app.get('/auth/google', passport.authenticate('google', { scope: ['profile email'] }));
     app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+    app.get('/auth/manual', facebookController.authenticate);
     app.get('/facebook', passport.authenticate('facebook', {
         failureRedirect: '/auth/facebook/error',
     }), facebookController.authenticate)
