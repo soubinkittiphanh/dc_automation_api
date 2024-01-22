@@ -39,7 +39,7 @@ const createApiDirectory = async (user) => {
     createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPIConfigFile(user.apiPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPIConfigFile(user.apiPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
@@ -82,7 +82,7 @@ const createAppDirectory = async (user) => {
     createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPPConfigFile(user.appPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
