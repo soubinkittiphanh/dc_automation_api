@@ -138,9 +138,9 @@ const createSupervisorcltAPPConfigFile = (portNumber, directory, apiPort) => {
     logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
     const filePath = path.join(`${path_production}/config/supervisor`, `app_auto_${portNumber}.conf`);
     const fileContent = `[program:web_${portNumber}]
-    environment=PORT=${apiPort}
+    environment=API_PORT=${apiPort}
+    environment=PORT=${portNumber}
     command=/bin/bash -c "export PATH=/root/.nvm/versions/node/v16.20.2/bin:$PATH && npm run build && npm run start"
-    environment=PORT=${apiPort}
     autostart=true
     startsecs=10
     autorestart=true
