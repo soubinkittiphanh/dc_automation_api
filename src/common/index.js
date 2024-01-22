@@ -48,6 +48,8 @@ const createApiDirectory = async (user) => {
     await linuxExecSample(`supervisorctl add api_${user.apiPort.port}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
+    // ***** add allow port to ufw  *****
+    await linuxExecSample(`sudo ufw allow ${user.apiPort.port}`, `allow access port to ufw firewall`)
 
 }
 const createAppDirectory = async (user) => {
@@ -88,8 +90,11 @@ const createAppDirectory = async (user) => {
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add web_${user.apiPort.port}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add web_${user.appPort.port}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
+
+    // ***** add allow port to ufw  *****
+    await linuxExecSample(`sudo ufw allow ${user.appPort.port}`, `allow access port to ufw firewall`)
 
 
 }
