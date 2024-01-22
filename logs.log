@@ -2347,3 +2347,23 @@
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T06:53:20.319Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T06:53:21.368Z"}
 {"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T06:53:26.005Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T07:09:54.138Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T07:09:54.140Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T07:09:54.141Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T07:09:54.141Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T07:09:54.142Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T07:09:55.624Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T07:09:55.625Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T07:09:55.626Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T07:09:57.665Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T07:11:04.787Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-01-22T07:18:22.716Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-01-22T07:18:22.718Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-01-22T07:18:22.719Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-01-22T07:18:22.719Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-01-22T07:18:22.720Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-01-22T07:18:23.259Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T07:18:23.259Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T07:18:23.260Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T07:18:24.241Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T07:18:29.583Z"}

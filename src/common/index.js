@@ -84,7 +84,7 @@ const createAppDirectory = async (user) => {
     // createDynamicFile(fileContent, api_home_path_final)
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`,user.apiPort.port) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
@@ -94,7 +94,7 @@ const createAppDirectory = async (user) => {
     // ***** API will start automatically *****
 
     // ***** add allow port to ufw  *****
-    await linuxExecSample(`sudo ufw allow ${user.appPort.port}`, `allow access port to ufw firewall`)
+    await linuxExecSample(`sudo ufw allow ${user.appPort.port}/tcp`, `allow access port to ufw firewall`)
 
 
 }
@@ -134,13 +134,13 @@ const createSupervisorcltAPIConfigFile = (portNumber, directory) => {
     });
 
 }
-const createSupervisorcltAPPConfigFile = (portNumber, directory) => {
+const createSupervisorcltAPPConfigFile = (portNumber, directory, apiPort) => {
     logger.warn(`USER PROP ${JSON.stringify(portNumber)}`)
     const filePath = path.join(`${path_production}/config/supervisor`, `app_auto_${portNumber}.conf`);
     const fileContent = `[program:web_${portNumber}]
-    environment=PORT=${portNumber}
+    environment=PORT=${apiPort}
     command=/bin/bash -c "export PATH=/root/.nvm/versions/node/v16.20.2/bin:$PATH && npm run build && npm run start"
-    environment=PORT=${portNumber}
+    environment=PORT=${apiPort}
     autostart=true
     startsecs=10
     autorestart=true
