@@ -2346,3 +2346,4 @@
 {"level":"info","message":"app is runing: 3000","timestamp":"2024-01-22T06:53:20.318Z"}
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-01-22T06:53:20.319Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2024-01-22T06:53:21.368Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-01-22T06:53:26.005Z"}
