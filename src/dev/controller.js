@@ -10,7 +10,10 @@ const registerApplication = {
       profileName: 'DEV TEST',
       profileProvider: 'TEST',
       isActive: true,
-      apiPort: { port: 778899 }
+      port: {
+        appPort: 778899,
+        apiPort: 998877
+      }
     }
     commonService.createApiDirectory(newUser)
     commonService.createAppDirectory(newUser)

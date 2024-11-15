@@ -43,17 +43,17 @@ const createApiDirectory = async (user) => {
 
 
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPIConfigFile(user.apiPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
+    createSupervisorcltAPIConfigFile(user.port.apiPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add api_${user.apiPort.port}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add api_${user.port.apiPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
     // ***** add allow port to ufw  *****
-    await linuxExecSample(`sudo ufw allow ${user.apiPort.port}`, `allow access port to ufw firewall`)
+    await linuxExecSample(`sudo ufw allow ${user.port.apiPort}`, `allow access port to ufw firewall`)
 
 }
 const createAppDirectory = async (user) => {
@@ -69,7 +69,7 @@ const createAppDirectory = async (user) => {
     await linuxExecSample(`cp -r ${app_draft_path}/* ${app_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
     const AppCONFfileContent = `
         export const hostName = () => {
-        const baseURL = 'http://150.95.31.23:${user.apiPort.port}' // ***AUTO*** 
+        const baseURL = 'http://150.95.31.23:${user.port.appPort}' // ***AUTO*** 
         return baseURL;
         }
         export const mainCompanyInfo = () => {
@@ -88,17 +88,17 @@ const createAppDirectory = async (user) => {
     // ----APP Config file
     createDynamicFile(AppCONFfileContent, app_home_path_final)
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`, user.apiPort.port) // Create supervisorclt config file for API 
+    createSupervisorcltAPPConfigFile(user.port.appPort, `dc_${user.profileId}`, user.port.appPort) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add web_${user.appPort.port}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add web_${user.port.appPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
     // ***** add allow port to ufw  *****
-    await linuxExecSample(`sudo ufw allow ${user.appPort.port}/tcp`, `allow access port to ufw firewall`)
+    await linuxExecSample(`sudo ufw allow ${user.port.appPort}/tcp`, `allow access port to ufw firewall`)
 
 
 }
