@@ -82,6 +82,7 @@ const buildApp = async () => {
     })
     app.use("/api/user", myRouter.userRouter)
     app.use("/api/company", myRouter.companyRouter)
+    app.use("/api/dev", myRouter.devRouter)
     return app;
 }
 

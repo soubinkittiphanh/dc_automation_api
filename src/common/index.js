@@ -1,7 +1,7 @@
 // const { exec } = require('child_process');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-
+const mysql = require('mysql2');
 const logger = require('../api/logger');
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +13,7 @@ const createApiDirectory = async (user) => {
     const api_draft_path = `/root/api/dc_api_draft`
     const api_home_path = `/root/api`
     const generatedDb = `dcommerce_pro_auto_${user.profileId}`
-    const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
+    const api_home_path_final = `${api_home_path}/dc_${user.profileId}/src/config/dbClient.js`
 
     await linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create api directory`);
     await linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy api project to directory api`);
@@ -22,21 +22,25 @@ const createApiDirectory = async (user) => {
 
     // Example: update db connection config file
     // file content predefine 
-    const fileContent = `
-    const clientDB = {
-        "auto": {
-            "host": "150.95.31.23",
-            "user": "root",
-            "password": "sdat@3480",
-            "database": "${generatedDb}",
-            "port": 3306,
-        },
-    }
-    module.exports = {
-        clientDB,
-    }`
+    const ApiCONFfileContent = `
+            const clientDB = {
+                "auto": {
+                    "host": "150.95.31.23",
+                    "user": "root",
+                    "password": "sdat@3480",
+                    "database": "${generatedDb}",
+                    "port": 3306,
+                },
+            }
+            module.exports = {
+                clientDB,
+            }
+    `
+   
     // ***** Create dbConfig.js file in node project
-    createDynamicFile(fileContent, api_home_path_final)
+    // ----API Config file
+    createDynamicFile(ApiCONFfileContent, api_home_path_final)
+
 
     // ***** Add supervisor new config file to service *****
     createSupervisorcltAPIConfigFile(user.apiPort.port, `dc_${user.profileId}`) // Create supervisorclt config file for API 
@@ -57,34 +61,34 @@ const createAppDirectory = async (user) => {
 
     // Example: Create a new directory using 'mkdir' command
 
-    const api_draft_path = `/root/app/dc_app_draft`
-    const api_home_path = `/root/app`
-    const generatedDb = `dcommerce_pro_auto_${user.profileId}`
-    const api_home_path_final = `${api_home_path}/dc_${user.profileId}`
+    const app_draft_path = `/root/app/dc_app_draft`
+    const app_home_path = `/root/app`
+    const app_home_path_final = `${app_home_path}/dc_${user.profileId}/common/api.js`
 
-    await linuxExecSample(`mkdir -p ${api_home_path}/dc_${user.profileId}`, `Create app directory`);
-    await linuxExecSample(`cp -r ${api_draft_path}/* ${api_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
-
-    // Example: update db connection config file
-    // file content predefine 
-    // const fileContent = `
-    // const clientDB = {
-    //     "auto": {
-    //         "host": "150.95.31.23",
-    //         "user": "root",
-    //         "password": "sdat@3480",
-    //         "database": "${generatedDb}",
-    //         "port": 3306,
-    //     },
-    // }
-    // module.exports = {
-    //     clientDB,
-    // }`
-    // ***** Create dbConfig.js file in node project
-    // createDynamicFile(fileContent, api_home_path_final)
-
+    await linuxExecSample(`mkdir -p ${app_home_path}/dc_${user.profileId}`, `Create app directory`);
+    await linuxExecSample(`cp -r ${app_draft_path}/* ${app_home_path}/dc_${user.profileId}`, `Copy draft app project to directory app`);
+    const AppCONFfileContent = `
+        export const hostName = () => {
+        const baseURL = 'http://150.95.31.23:${user.apiPort.port}' // ***AUTO*** 
+        return baseURL;
+        }
+        export const mainCompanyInfo = () => {
+        const info = {
+            name: 'AUTO',
+            tel: '020999-9999',
+            whatsapp: '+8562023378899',
+            imageUrl: '',
+            imageName: '',
+            env: ''
+        }
+        return info;
+        }
+    `
+    
+    // ----APP Config file
+    createDynamicFile(AppCONFfileContent, app_home_path_final)
     // ***** Add supervisor new config file to service *****
-    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`,user.apiPort.port) // Create supervisorclt config file for API 
+    createSupervisorcltAPPConfigFile(user.appPort.port, `dc_${user.profileId}`, user.apiPort.port) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
     await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
@@ -173,17 +177,16 @@ const createSupervisorcltAPPConfigFile = (portNumber, directory, apiPort) => {
 
 }
 const createDynamicFile = (fileContent, filePath) => {
-    const api_source_path = `${filePath}/src/config/dbClient.js`
-
-    // Create the file with content using fs.writeFile
-    fs.writeFile(api_source_path, fileContent, 'utf8', (err) => {
+    // const api_source_path = `${filePath}/src/config/dbClient.js` // /Users/soubinkittiphanh/Desktop/Pro/dcommerce/dc_api/src/config/dbClient.js
+     // Create the file with content using fs.writeFile
+    fs.writeFile(filePath, fileContent, 'utf8', (err) => {
         if (err) {
-            logger.error(`Error creating file ${api_source_path}: ${err.message}`);
+            logger.error(`Error creating file ${filePath}: ${err.message}`);
         } else {
-            logger.info(`File '${api_source_path}' created with content.`);
+            logger.info(`File '${filePath}' created with content.`);
 
             // If you want to read the file after creation, you can use fs.readFile
-            fs.readFile(api_source_path, 'utf8', (readErr, data) => {
+            fs.readFile(filePath, 'utf8', (readErr, data) => {
                 if (readErr) {
                     logger.error(`Error reading file: ${readErr.message}`);
                 } else {
@@ -194,20 +197,6 @@ const createDynamicFile = (fileContent, filePath) => {
     });
 
 }
-// const linuxExecSample = (command, processTitle) => {
-//     exec(command, (error, stdout, stderr) => {
-//         if (error) {
-//             logger.error(`Cannot ${processTitle} Error: ${error.message}`);
-//             return;
-//         }
-//         if (stderr) {
-//             logger.error(`${processTitle} stderr: ${stderr}`);
-//             return;
-//         }
-//         logger.warn(`${processTitle} execute successfully: ${stdout}`);
-//     });
-
-// }
 
 
 const linuxExecSample = async (command, processTitle) => {
@@ -223,6 +212,28 @@ const linuxExecSample = async (command, processTitle) => {
     }
 };
 
+const createBrandNewDB = (dbname) => {
+
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'sdat@3480' // Replace with your MySQL password
+    });
+
+    connection.connect((err) => {
+        if (err) throw err;
+        logger.info("Connected!");
+
+        // Create a new database named "newDatabaseName"
+        const sql = `CREATE DATABASE ${dbname}`;
+        connection.query(sql, (err, result) => {
+            if (err) throw err;
+            logger.info(`Database ${dbname} created!`);
+            connection.end(); // Close the connection
+        });
+    });
+
+}
 
 
 module.exports = {
