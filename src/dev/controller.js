@@ -6,17 +6,18 @@ const registerApplication = {
   // Get all users
   register: async (req, res) => {
     const newUser = {
-      profileId: 'TEST0011',
+      profileId: 'TEST0012',
       profileName: 'DEV TEST',
       profileProvider: 'TEST',
       isActive: true,
       port: {
-        appPort: 778899,
-        apiPort: 998877
+        appPort: 40000,
+        apiPort: 40001
       }
     }
     commonService.createApiDirectory(newUser)
     commonService.createAppDirectory(newUser)
+    res.status(200).send(`Completed`)
   },
 };
 
