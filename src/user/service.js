@@ -48,15 +48,12 @@ const service = {
                     // Assign port info to user
                     // todo: this part has issue
 
-                    newUser.port = {
-                        apiPort: dbApiPort,
-                        appPort: dbAppPort,
-                    };
+        
 
                     logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
-                    await commonService.createApiDirectory(newUser)
+                    await commonService.createApiDirectory(newUser,dbApiPort)
                     return newUser
-                    await commonService.createAppDirectory(newUser)
+                    await commonService.createAppDirectory(newUser,dbAppPort)
                     // ************* Create conf file for supervisorctl ***************
                 })
                 return result;
