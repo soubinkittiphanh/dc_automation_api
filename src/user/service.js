@@ -37,17 +37,18 @@ const service = {
                     user.companyProfile.userId = newUser.id
                     user.companyProfile.appPort = appPort
                     user.companyProfile.apiPort = apiPort
-                    logger.info(`Company profile before insert ${user.companyProfile}`)
+                    logger.info(`Company profile before insert ${JSON.stringify(user.companyProfile)}`)
                     const company = await companyService.createProfile(user.companyProfile, t)
                     // ************* Mapp company & app_port ***************
                     const dbApiPort = await portService.createPort(apiPort, company.id, 'API', true, t)
                     const dbAppPort = await portService.createPort(appPort, company.id, 'APP', true, t)
                     logger.info(`Finall appport: ${appPort} apiport: ${apiPort}`)
-
+                    
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
                     newUser.port.apiPort = dbApiPort
                     newUser.port.appPort = dbAppPort
+                    logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
                     await commonService.createApiDirectory(newUser)
                     return newUser
                     await commonService.createAppDirectory(newUser)
