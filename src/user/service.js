@@ -43,11 +43,16 @@ const service = {
                     const dbApiPort = await portService.createPort(apiPort, company.id, 'API', true, t)
                     const dbAppPort = await portService.createPort(appPort, company.id, 'APP', true, t)
                     logger.info(`Finall appport: ${appPort} apiport: ${apiPort}`)
-                    
+
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
-                    newUser.port.apiPort = dbApiPort
-                    newUser.port.appPort = dbAppPort
+                    // todo: this part has issue
+
+                    newUser.port = {
+                        apiPort: dbApiPort,
+                        appPort: dbAppPort,
+                    };
+
                     logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
                     await commonService.createApiDirectory(newUser)
                     return newUser
