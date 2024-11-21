@@ -33,39 +33,25 @@ const service = {
                     + apiPort++;
                     + appPort++;
                     // ************ Create company_profile record *************
-                    const companyProfile = {
-                        companyName: 'Dummy',
-                        companyEmail: 'Dummy email',
-                        companyTelephone: 'Dummy phone',
-                        systemPackage: 'FREE',
-                        apiLink: 'Dummy link api',
-                        appLink: 'Dummy link app',
-                        appPort,
-                        apiPort,
-                        db: 'DummyDB',
-                        isActive: true,
-                        userId: newUser.id
-                    };
-                    const company = await companyService.createProfile(companyProfile, t)
+                    user.companyProfile.db = `dcommerce_pro_auto_${profileId}`
+                    user.companyProfile.userId = newUser.id
+                    user.companyProfile.appPort = appPort
+                    user.companyProfile.apiPort = apiPort
+                    logger.info(`Company profile before insert ${user.companyProfile}`)
+                    const company = await companyService.createProfile(user.companyProfile, t)
                     // ************* Mapp company & app_port ***************
-                    const dbApiPort = await portService.createPort(apiPort,company.id, 'API', true, t)
-                    const dbAppPort = await portService.createPort(appPort,company.id, 'APP', true, t)
+                    const dbApiPort = await portService.createPort(apiPort, company.id, 'API', true, t)
+                    const dbAppPort = await portService.createPort(appPort, company.id, 'APP', true, t)
                     logger.info(`Finall appport: ${appPort} apiport: ${apiPort}`)
-                    
+
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
                     newUser.apiPort = dbApiPort
                     newUser.appPort = dbAppPort
-                    commonService.createApiDirectory(newUser)
-                    commonService.createAppDirectory(newUser)
-                    // ************* Create conf file for supervisorctl ***************
-                    const companyInfo = {
-                        companyName:'Dummy name',
-                        apiDirectory:'Dummy directory',
-                        apiPort,
-                
-                    }
+                    await commonService.createApiDirectory(newUser)
                     return newUser
+                    await commonService.createAppDirectory(newUser)
+                    // ************* Create conf file for supervisorctl ***************
                 })
                 return result;
             } catch (error) {
@@ -77,7 +63,7 @@ const service = {
         return userCreated;
     },
     // Get a single user by ID
-    getUserById: async (profileId) => {
+    getUserByProfileId: async (profileId) => {
         try {
             const userInstance = await User.findOne({
                 where: {

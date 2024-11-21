@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
             // primaryKey: true
+            unique: true, // Ensures 'port' is unique
         },
         profileName: {
             type: DataTypes.STRING,

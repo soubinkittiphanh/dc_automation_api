@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         port: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // primaryKey: true
+            primaryKey: true, // Makes 'port' the primary key
         },
         type:{
             type: DataTypes.ENUM('API', 'APP'),

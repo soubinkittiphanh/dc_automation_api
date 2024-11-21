@@ -1,6 +1,6 @@
 const logger = require('../api/logger');
 const { user } = require('../model'); // Adjust the path based on your project structure
-
+const userService = require('./service')
 // Controller to handle CRUD operations for users
 const userController = {
   // Get all users
@@ -34,16 +34,30 @@ const userController = {
   createUser: async (req, res) => {
     const { profileId, profileName, profileProvider, isActive } = req.body;
     try {
+      const dbUser = await userService.getUserByProfileId(profileId);
+      let registerStatus = 201;
+      if (dbUser) {
+        if (dbUser.company) {
+          logger.info(`Customer already register completed`)
+          logger.info(dbUser.company)
+          registerStatus = 202
+        } else {
+          logger.warn(`Customer already register not yet 100% completed`)
+          registerStatus = 201
+        }
+        return res.status(registerStatus).json(dbUser);
+
+      }
       const newUser = await user.create({
         profileId,
         profileName,
         profileProvider,
         isActive,
       });
-      res.json(newUser);
+      res.status(201).json(newUser);
     } catch (error) {
       logger.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: `Internal Server Error ${error}` });
     }
   },
 
@@ -86,6 +100,26 @@ const userController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
+  // Register user
+  registerUser: async (req, res) => {
+    const { profileId, profileName, profileProvider, isActive } = req.body;
+    logger.info(`User payload ${JSON.stringify(req.body)}`);
+    // return res.status(200).send(req.body);
+    const dbUser = await userService.getUserByProfileId(profileId);
+    if (dbUser) return res.status(503).send(`User already registered please login instead`)
+    const userCreated = await userService.createUser(req.body);
+    res.status(201).json(userCreated);
+  },
+  validatePrinterSerialNumber: async (req, res) => {
+
+    const { printerSerialNo } = req.params;
+    logger.info(`Validating data ${printerSerialNo}`)
+    const dbUser = await userService.getUserByProfileId(printerSerialNo);
+    logger.info(`Validating data finish ${dbUser}`)
+    if (dbUser) return res.status(503).send(`User already registered please login instead`)
+    // const userCreated = await userService.createUser();
+    res.status(200).send('unregister device');
+  }
 };
 
 module.exports = userController;

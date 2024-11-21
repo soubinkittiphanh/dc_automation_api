@@ -2406,3 +2406,422 @@
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-15T04:17:34.260Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2024-11-15T04:17:34.889Z"}
 {"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-15T04:17:36.887Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-17T05:47:59.242Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-17T05:47:59.244Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-17T05:47:59.245Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-17T05:47:59.245Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-17T05:47:59.246Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-17T05:47:59.704Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-11-17T05:47:59.705Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-17T05:47:59.706Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-17T05:48:00.556Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-17T05:53:18.059Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-17T05:53:18.062Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-17T05:53:18.062Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-17T05:53:18.063Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-17T05:53:18.063Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-17T05:53:18.521Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-11-17T05:53:18.522Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-17T05:53:18.523Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-17T05:53:18.708Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-17T05:54:52.352Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-17T05:54:52.354Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-17T05:54:52.355Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-17T05:54:52.355Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-17T05:54:52.356Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-17T05:54:52.814Z"}
+{"level":"info","message":"app is runing: 3000","timestamp":"2024-11-17T05:54:52.815Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-17T05:54:52.816Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-17T05:54:52.991Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-17T05:54:53.163Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-17T06:00:15.571Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-17T06:00:15.573Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-17T06:00:15.574Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-17T06:00:15.574Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-17T06:00:15.575Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-17T06:00:16.059Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-17T06:00:16.060Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-17T06:00:16.061Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-17T06:00:16.292Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-17T06:00:19.638Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-17T06:03:52.878Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-17T06:03:52.880Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-17T06:03:52.881Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-17T06:03:52.881Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-17T06:03:52.882Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-17T06:03:53.386Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-17T06:03:53.387Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-17T06:03:53.387Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-17T06:03:53.576Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-17T06:03:54.502Z"}
+{"errors":[{"instance":{"createdAt":"2024-11-17T06:04:02.994Z","id":null,"isActive":true,"profileId":"051111407592","profileName":"Mobile register","profileProvider":"DC Mobile","updateTimestamp":"2024-11-17T06:04:02.994Z"},"message":"profileId must be unique","origin":"DB","path":"profileId","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"051111407592"}],"fields":{"profileId":"051111407592"},"level":"error","name":"SequelizeUniqueConstraintError","original":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:02.994","2024-11-17 06:04:02.994"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"parent":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:02.994","2024-11-17 06:04:02.994"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","timestamp":"2024-11-17T06:04:03.025Z"}
+{"errors":[{"instance":{"createdAt":"2024-11-17T06:04:12.608Z","id":null,"isActive":true,"profileId":"051111407592","profileName":"Mobile register","profileProvider":"DC Mobile","updateTimestamp":"2024-11-17T06:04:12.608Z"},"message":"profileId must be unique","origin":"DB","path":"profileId","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"051111407592"}],"fields":{"profileId":"051111407592"},"level":"error","name":"SequelizeUniqueConstraintError","original":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:12.608","2024-11-17 06:04:12.608"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"parent":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:12.608","2024-11-17 06:04:12.608"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","timestamp":"2024-11-17T06:04:12.629Z"}
+{"errors":[{"instance":{"createdAt":"2024-11-17T06:04:37.510Z","id":null,"isActive":true,"profileId":"051111407592","profileName":"Mobile register","profileProvider":"DC Mobile","updateTimestamp":"2024-11-17T06:04:37.510Z"},"message":"profileId must be unique","origin":"DB","path":"profileId","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"051111407592"}],"fields":{"profileId":"051111407592"},"level":"error","name":"SequelizeUniqueConstraintError","original":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:37.510","2024-11-17 06:04:37.510"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"parent":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["051111407592","Mobile register","DC Mobile",true,"2024-11-17 06:04:37.510","2024-11-17 06:04:37.510"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '051111407592' for key 'profileId'","sqlState":"23000"},"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","timestamp":"2024-11-17T06:04:37.535Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-18T14:02:28.014Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-18T14:02:28.017Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-18T14:02:28.017Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-18T14:02:28.017Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-18T14:02:28.018Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-18T14:02:28.530Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-18T14:02:28.531Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-18T14:02:28.532Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-18T14:02:29.133Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-18T14:02:30.236Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-18T14:02:48.783Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-18T14:02:48.785Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-18T14:02:48.786Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-18T14:02:48.786Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-18T14:02:48.786Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-18T14:02:49.199Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-18T14:02:49.200Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-18T14:02:49.201Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-18T14:02:49.407Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-18T14:02:50.406Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-18T14:20:57.725Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-18T14:20:57.727Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-18T14:20:57.728Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-18T14:20:57.728Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-18T14:20:57.728Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-18T14:20:58.176Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-18T14:20:58.177Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-18T14:20:58.178Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-18T14:20:58.354Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-18T14:20:59.324Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-18T14:23:01.764Z"}
+{"level":"warn","message":"Customer already register not yet 100% completed","timestamp":"2024-11-18T14:23:01.767Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-18T14:28:08.654Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-18T14:28:08.656Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-18T14:28:08.657Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-18T14:28:08.657Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-18T14:28:08.658Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-18T14:28:09.161Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-18T14:28:09.161Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-18T14:28:09.162Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-18T14:28:09.353Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-18T14:28:10.367Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-18T14:34:24.693Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-18T14:34:24.695Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-18T14:34:24.695Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-18T14:34:24.696Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-18T14:34:24.696Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-18T14:34:25.190Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-18T14:34:25.191Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-18T14:34:25.191Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-18T14:34:25.386Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-18T14:34:26.322Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-19T14:47:20.447Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-19T14:47:20.450Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-19T14:47:20.450Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-19T14:47:20.451Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-19T14:47:20.451Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-19T14:47:21.272Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-19T14:47:21.273Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-19T14:47:21.274Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-19T14:47:21.604Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-19T14:47:22.703Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-19T14:56:35.352Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-19T14:56:35.354Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-19T14:56:35.355Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-19T14:56:35.355Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-19T14:56:35.356Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-19T14:56:35.832Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-19T14:56:35.833Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-19T14:56:35.834Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-19T14:56:36.016Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-19T14:56:36.953Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-19T15:03:37.144Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-19T15:03:37.147Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-19T15:03:37.148Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-19T15:03:37.148Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-19T15:03:37.148Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-19T15:03:37.768Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-19T15:03:37.769Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-19T15:03:37.770Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-19T15:03:37.993Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-19T15:03:38.905Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-19T15:09:08.648Z"}
+{"level":"error","message":"User not found with profileId adfsd, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2024-11-19T15:09:26.772Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-19T15:09:26.776Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-19T15:09:52.860Z"}
+{"level":"error","message":"User not found with profileId adfsd, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2024-11-19T15:10:10.876Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-19T15:10:10.878Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-19T15:10:56.415Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-19T15:10:56.484Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2024-11-19T15:10:56.485Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T14:43:27.010Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T14:43:27.012Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T14:43:27.013Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T14:43:27.013Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T14:43:27.013Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T14:43:27.469Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T14:43:27.470Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T14:43:27.470Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T14:43:27.715Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T14:43:28.827Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:54:56.695Z"}
+{"level":"error","message":"User not found with profileId 051111407592, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2024-11-20T14:55:14.938Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T14:55:14.942Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:56:06.382Z"}
+{"level":"error","message":"User not found with profileId 051111407592, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2024-11-20T14:56:30.037Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T14:56:30.041Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:56:34.701Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-20T14:56:34.820Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2024-11-20T14:56:34.821Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:56:47.935Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-20T14:56:48.078Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2024-11-20T14:56:48.084Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:57:33.128Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-20T14:57:33.186Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2024-11-20T14:57:33.187Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:59:02.767Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T14:59:02.833Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:59:32.641Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T14:59:32.684Z"}
+{"level":"info","message":"Validating data","timestamp":"2024-11-20T14:59:42.889Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T14:59:42.918Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:00:26.742Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:00:26.744Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:00:26.745Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:00:26.745Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:00:26.746Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:00:27.338Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:00:27.339Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:00:27.340Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-20T15:00:28.438Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:00:31.076Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:00:31.079Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:00:31.079Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:00:31.080Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:00:31.080Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:00:31.478Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:00:31.479Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:00:31.480Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T15:00:31.668Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T15:00:32.597Z"}
+{"level":"info","message":"Validating data 742220077492","timestamp":"2024-11-20T15:00:35.486Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T15:00:35.538Z"}
+{"level":"info","message":"Validating data 742220077492","timestamp":"2024-11-20T15:01:14.493Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2024-11-20T15:01:14.647Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:02:20.617Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:02:20.620Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:02:20.620Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:02:20.621Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:02:20.621Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:02:21.519Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:02:21.519Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:02:21.520Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T15:02:21.701Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T15:02:22.575Z"}
+{"level":"info","message":"User payload [object Object]","timestamp":"2024-11-20T15:02:27.919Z"}
+{"level":"info","message":"User payload [object Object]","timestamp":"2024-11-20T15:16:07.830Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:22:23.062Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:22:23.064Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:22:23.065Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:22:23.065Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:22:23.066Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:22:23.603Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:22:23.604Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:22:23.605Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-20T15:22:24.694Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:22:29.013Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:22:29.015Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:22:29.016Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:22:29.016Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:22:29.016Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:22:29.467Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:22:29.468Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:22:29.468Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T15:22:29.674Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T15:22:30.592Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:22:43.544Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:22:43.547Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:22:43.548Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:22:43.548Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:22:43.549Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:22:44.000Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:22:44.001Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:22:44.002Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T15:22:44.199Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T15:22:45.118Z"}
+{"level":"info","message":"User payload [object Object]","timestamp":"2024-11-20T15:22:51.077Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-20T15:24:38.763Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-20T15:24:38.766Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-20T15:24:38.767Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-20T15:24:38.767Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-20T15:24:38.768Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-20T15:24:39.325Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-20T15:24:39.326Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-20T15:24:39.326Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-20T15:24:39.509Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-20T15:24:40.412Z"}
+{"level":"info","message":"User payload {\"id\":null,\"profileId\":\"742220077492\",\"profileName\":\"\",\"profileProvider\":\"MOBILE AUTO REGISTER\",\"isActive\":true,\"companyProfile\":{\"companyName\":\"\",\"companyEmail\":\"\",\"companyTelephone\":\"\",\"systemPackage\":\"FREE\",\"apiLink\":\"apiLink\",\"appLink\":\"appLink\",\"appPort\":3900,\"apiPort\":8900,\"db\":\"\",\"isActive\":true}}","timestamp":"2024-11-20T15:24:45.171Z"}
+{"level":"info","message":"Company profile before insert [object Object]","timestamp":"2024-11-20T15:24:45.291Z"}
+{"level":"warn","message":"Company profile data \n{\"companyName\":\"\",\"companyEmail\":\"\",\"companyTelephone\":\"\",\"systemPackage\":\"FREE\",\"apiLink\":\"apiLink\",\"appLink\":\"appLink\",\"appPort\":3900,\"apiPort\":8900,\"db\":\"dcommerce_pro_auto_742220077492\",\"isActive\":true}","timestamp":"2024-11-20T15:24:45.293Z"}
+{"level":"info","message":"Finall appport: 3901 apiport: 8901","timestamp":"2024-11-20T15:24:45.351Z"}
+{"level":"warn","message":"User created {\"id\":6,\"profileId\":\"742220077492\",\"profileName\":\"\",\"profileProvider\":\"MOBILE AUTO REGISTER\",\"isActive\":true,\"updateTimestamp\":\"2024-11-20T15:24:45.232Z\",\"createdAt\":\"2024-11-20T15:24:45.232Z\"}","timestamp":"2024-11-20T15:24:45.368Z"}
+{"level":"info","message":"Validating data 051111407592","timestamp":"2024-11-20T15:26:11.388Z"}
+{"level":"info","message":"User found {\"id\":1,\"profileId\":\"051111407592\",\"profileName\":\"Mobile register\",\"profileProvider\":\"DC Mobile\",\"isActive\":true,\"createdAt\":\"2024-11-17T06:00:30.000Z\",\"updateTimestamp\":\"2024-11-17T06:00:30.000Z\",\"company\":null}","timestamp":"2024-11-20T15:26:11.441Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2024-11-20T15:26:11.442Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:44:43.325Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:44:43.327Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:44:43.328Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:44:43.328Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:44:43.328Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:44:43.852Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:44:43.853Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:44:43.853Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T06:44:44.855Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:44:47.596Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:44:47.599Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:44:47.600Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:44:47.600Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:44:47.601Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:44:47.933Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:44:47.933Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:44:47.934Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1001ms","timestamp":"2024-11-21T06:44:48.939Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:46:36.128Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:46:36.130Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:46:36.131Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:46:36.131Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:46:36.132Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:46:37.954Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:46:37.955Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:46:37.956Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T06:46:38.946Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:46:57.514Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:46:57.517Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:46:57.517Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:46:57.518Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:46:57.518Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:46:58.230Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:46:58.231Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:46:58.232Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T06:46:59.238Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:47:07.820Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:47:07.822Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:47:07.823Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:47:07.823Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:47:07.824Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:47:08.395Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:47:08.396Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:47:08.397Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1006ms","timestamp":"2024-11-21T06:47:09.402Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:54:11.079Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:54:11.081Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:54:11.082Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:54:11.082Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:54:11.082Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:54:11.636Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:54:11.637Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:54:11.637Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T06:54:12.640Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:54:26.450Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:54:26.453Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:54:26.453Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:54:26.453Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:54:26.454Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:54:26.866Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:54:26.867Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:54:26.867Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T06:54:27.868Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:56:01.526Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:56:01.528Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:56:01.529Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:56:01.529Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:56:01.530Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:56:02.550Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:56:02.551Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:56:02.551Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T06:56:03.552Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T06:59:28.117Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T06:59:28.119Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T06:59:28.119Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T06:59:28.120Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T06:59:28.120Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T06:59:28.567Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T06:59:28.568Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T06:59:28.569Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T06:59:29.570Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:03:31.692Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:03:31.695Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:03:31.696Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:03:31.696Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:03:31.699Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:03:32.567Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:03:32.568Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:03:32.569Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1004ms","timestamp":"2024-11-21T07:03:33.572Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:04:41.928Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:04:41.931Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:04:41.931Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:04:41.932Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:04:41.932Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:04:42.559Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:04:42.559Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:04:42.560Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T07:04:43.558Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:04:53.675Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:04:53.677Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:04:53.678Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:04:53.679Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:04:53.679Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:04:54.185Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:04:54.185Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:04:54.186Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T07:04:55.189Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:05:03.151Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:05:03.153Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:05:03.154Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:05:03.155Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:05:03.155Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:05:03.603Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:05:03.604Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:05:03.605Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T07:05:04.603Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:09:06.788Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:09:06.791Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:09:06.792Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:09:06.792Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:09:06.792Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:09:07.612Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:09:07.613Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:09:07.613Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T07:09:08.615Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:10:24.233Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:10:24.235Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:10:24.235Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:10:24.236Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:10:24.236Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:10:24.684Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:10:24.685Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:10:24.686Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T07:10:25.687Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:11:25.629Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:11:25.631Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:11:25.632Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:11:25.632Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:11:25.632Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:11:26.143Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:11:26.143Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:11:26.144Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1003ms","timestamp":"2024-11-21T07:11:27.148Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:12:25.638Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:12:25.641Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:12:25.641Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:12:25.642Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:12:25.642Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:12:26.203Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:12:26.204Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:12:26.205Z"}
+{"level":"error","message":"client_db Connection error: SequelizeConnectionError: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1002ms","timestamp":"2024-11-21T07:12:27.206Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2024-11-21T07:13:34.619Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2024-11-21T07:13:34.621Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2024-11-21T07:13:34.621Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2024-11-21T07:13:34.622Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2024-11-21T07:13:34.622Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2024-11-21T07:13:35.212Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2024-11-21T07:13:35.213Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:13:35.213Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2024-11-21T07:13:37.285Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-21T07:13:37.788Z"}

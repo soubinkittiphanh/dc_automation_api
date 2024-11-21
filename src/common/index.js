@@ -36,10 +36,10 @@ const createApiDirectory = async (user) => {
                 clientDB,
             }
     `
-   
+
     // ***** Create dbConfig.js file in node project
     // ----API Config file
-    createDynamicFile(ApiCONFfileContent, api_home_path_final)
+    await createDynamicFile(ApiCONFfileContent, api_home_path_final)
 
 
     // ***** Add supervisor new config file to service *****
@@ -84,9 +84,9 @@ const createAppDirectory = async (user) => {
         return info;
         }
     `
-    
+
     // ----APP Config file
-    createDynamicFile(AppCONFfileContent, app_home_path_final)
+    await createDynamicFile(AppCONFfileContent, app_home_path_final)
     // ***** Add supervisor new config file to service *****
     createSupervisorcltAPPConfigFile(user.port.appPort, `dc_${user.profileId}`, user.port.appPort) // Create supervisorclt config file for API 
 
@@ -176,24 +176,46 @@ const createSupervisorcltAPPConfigFile = (portNumber, directory, apiPort) => {
     });
 
 }
-const createDynamicFile = (fileContent, filePath) => {
+const createDynamicFile = async (fileContent, filePath) => {
     // const api_source_path = `${filePath}/src/config/dbClient.js` // /Users/soubinkittiphanh/Desktop/Pro/dcommerce/dc_api/src/config/dbClient.js
-     // Create the file with content using fs.writeFile
-    fs.writeFile(filePath, fileContent, 'utf8', (err) => {
-        if (err) {
-            logger.error(`Error creating file ${filePath}: ${err.message}`);
-        } else {
-            logger.info(`File '${filePath}' created with content.`);
+    // Create the file with content using fs.writeFile
+    // fs.writeFile(filePath, fileContent, 'utf8', (err) => {
+    //     if (err) {
+    //         logger.error(`Error creating file ${filePath}: ${err.message}`);
+    //     } else {
+    //         logger.info(`File '${filePath}' created with content.`);
 
-            // If you want to read the file after creation, you can use fs.readFile
-            fs.readFile(filePath, 'utf8', (readErr, data) => {
-                if (readErr) {
-                    logger.error(`Error reading file: ${readErr.message}`);
-                } else {
-                    logger.warn(`File content: ${data}`);
-                }
-            });
-        }
+    //         // If you want to read the file after creation, you can use fs.readFile
+    //         fs.readFile(filePath, 'utf8', (readErr, data) => {
+    //             if (readErr) {
+    //                 logger.error(`Error reading file: ${readErr.message}`);
+    //             } else {
+    //                 logger.warn(`File content: ${data}`);
+    //             }
+    //         });
+    //     }
+    // });
+
+    return new Promise((resolve, reject) => {
+        fs.writeFile(filePath, fileContent, 'utf8', (err) => {
+            if (err) {
+                logger.error(`Error creating file ${filePath}: ${err.message}`);
+                reject(err); // Reject the promise if there is an error
+            } else {
+                logger.info(`File '${filePath}' created with content.`);
+
+                // Optionally read the file to confirm its content
+                fs.readFile(filePath, 'utf8', (readErr, data) => {
+                    if (readErr) {
+                        logger.error(`Error reading file: ${readErr.message}`);
+                        reject(readErr); // Reject the promise if reading fails
+                    } else {
+                        logger.warn(`File content: ${data}`);
+                        resolve(data); // Resolve the promise after successful read
+                    }
+                });
+            }
+        });
     });
 
 }
@@ -211,30 +233,6 @@ const linuxExecSample = async (command, processTitle) => {
         logger.error(`Cannot ${processTitle} Error: ${error.message}`);
     }
 };
-
-const createBrandNewDB = (dbname) => {
-
-    const connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'sdat@3480' // Replace with your MySQL password
-    });
-
-    connection.connect((err) => {
-        if (err) throw err;
-        logger.info("Connected!");
-
-        // Create a new database named "newDatabaseName"
-        const sql = `CREATE DATABASE ${dbname}`;
-        connection.query(sql, (err, result) => {
-            if (err) throw err;
-            logger.info(`Database ${dbname} created!`);
-            connection.end(); // Close the connection
-        });
-    });
-
-}
-
 
 module.exports = {
     createApiDirectory,

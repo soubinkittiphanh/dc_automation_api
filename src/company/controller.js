@@ -28,6 +28,21 @@ const companyProfileController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
+  // Get a single company profile by ID
+  getProfileByUserId: async (req, res) => {
+    const { userId } = req.params;
+    try {
+      const profile = await company_profile.findOne({userId});
+      if (profile) {
+        res.json(profile);
+      } else {
+        res.status(404).json({ error: 'Profile not found' });
+      }
+    } catch (error) {
+      logger.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  },
 
   // Create a new company profile
   createProfile: async (req, res) => {

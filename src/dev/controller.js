@@ -14,11 +14,34 @@ const registerApplication = {
         appPort: 40000,
         apiPort: 40001
       }
+    };
+
+    const mti = {
+      code: '200',
+      message: 'Operation succeeded'
+    };
+
+    try {
+      // Step 1: Create API directory
+      await commonService.createApiDirectory(newUser);
+      logger.info('API directory created successfully.');
+
+      // Step 2: Create App directory
+      await commonService.createAppDirectory(newUser);
+      logger.info('App directory created successfully.');
+    } catch (error) {
+      // Log and set error response
+      const errorContext = error.context || 'Unknown context';
+      const errorMessage = `Operation failed during ${errorContext}: ${error.message}`;
+      logger.error(errorMessage);
+
+      mti.code = '503';
+      mti.message = errorMessage;
     }
-    commonService.createApiDirectory(newUser)
-    commonService.createAppDirectory(newUser)
-    res.status(200).send(`Completed`)
-  },
+    // Send final response
+    res.status(mti.code).send({ code: mti.code, message: mti.message });
+  }
+
 };
 
 module.exports = registerApplication;

@@ -1,5 +1,5 @@
 const logger = require('../api/logger');
-const AppPort= require('../model').appPort; // Adjust the path based on your project structure
+const AppPort = require('../model').appPort; // Adjust the path based on your project structure
 
 const appPortController = {
   // Get all app ports
@@ -83,6 +83,8 @@ const appPortController = {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   },
+
+
 };
 
 module.exports = appPortController;
