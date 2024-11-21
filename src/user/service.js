@@ -46,14 +46,10 @@ const service = {
 
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
-                    // todo: this part has issue
-
-        
-
                     logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
-                    await commonService.createApiDirectory(newUser,dbApiPort)
+                    await commonService.createApiDirectory(newUser,apiPort)
                     return newUser
-                    await commonService.createAppDirectory(newUser,dbAppPort)
+                    await commonService.createAppDirectory(newUser,appPort)
                     // ************* Create conf file for supervisorctl ***************
                 })
                 return result;
