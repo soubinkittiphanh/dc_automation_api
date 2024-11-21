@@ -46,8 +46,8 @@ const service = {
 
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
-                    newUser.apiPort = dbApiPort
-                    newUser.appPort = dbAppPort
+                    newUser.port.apiPort = dbApiPort
+                    newUser.port.appPort = dbAppPort
                     await commonService.createApiDirectory(newUser)
                     return newUser
                     await commonService.createAppDirectory(newUser)
