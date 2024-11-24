@@ -47,9 +47,9 @@ const service = {
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
                     logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
-                    // await commonService.createApiDirectory(newUser,apiPort)
+                    await commonService.createApiDirectory(newUser,apiPort)
                     await commonService.createAppDirectory(newUser,appPort)
-                    return newUser
+                    return apiPort;
                     // ************* Create conf file for supervisorctl ***************
                 })
                 return result;
@@ -57,9 +57,9 @@ const service = {
                 logger.error(`Cannot complete registration trail ${error}`)
             }
         }
-        const userCreated = await profileRegistration();
-        logger.warn(`User created ${JSON.stringify(userCreated)}`)
-        return userCreated;
+        const apiPort = await profileRegistration();
+        logger.warn(`User created ${JSON.stringify(apiPort)}`)
+        return apiPort;
     },
     // Get a single user by ID
     getUserByProfileId: async (profileId) => {
