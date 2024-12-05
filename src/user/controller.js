@@ -120,8 +120,6 @@ const userController = {
 
     if (containsSpecialChars(printerSerialNo)) {
       logger.error(`Input contains special characters ${printerSerialNo}`);
-    } else {
-      logger.info(`Input is clean ${printerSerialNo}`);
       return res.status(503).send(`Printer serial number cannot contain special char: ${printerSerialNo} `)
     }
     const dbUser = await userService.getUserByProfileId(printerSerialNo);
