@@ -118,11 +118,11 @@ const userController = {
     const containsSpecialChars = (str) => /[^a-zA-Z0-9\s]/.test(str);
 
 
-    if (containsSpecialChars(profileId)) {
-      logger.error(`Input contains special characters ${profileId}`);
+    if (containsSpecialChars(printerSerialNo)) {
+      logger.error(`Input contains special characters ${printerSerialNo}`);
     } else {
-      logger.info(`Input is clean ${profileId}`);
-      return res.status(503).send(`Printer serial number cannot contain special char: ${profileId} `)
+      logger.info(`Input is clean ${printerSerialNo}`);
+      return res.status(503).send(`Printer serial number cannot contain special char: ${printerSerialNo} `)
     }
     const dbUser = await userService.getUserByProfileId(printerSerialNo);
     logger.info(`Validating data finish ${dbUser}`)
