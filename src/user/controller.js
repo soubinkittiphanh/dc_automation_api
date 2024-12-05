@@ -105,6 +105,15 @@ const userController = {
     const { profileId, profileName, profileProvider, isActive } = req.body;
     logger.info(`User payload ${JSON.stringify(req.body)}`);
     // return res.status(200).send(req.body);
+    const containsSpecialChars = (str) => /[^a-zA-Z0-9\s]/.test(str);
+
+
+    if (containsSpecialChars(profileId)) {
+      logger.error(`Input contains special characters ${profileId}`);
+    } else {
+      logger.info(`Input is clean ${profileId}`);
+      return res.status(503).send(`Printer serial number cannot contain special char: ${profileId} `)
+    }
     const dbUser = await userService.getUserByProfileId(profileId);
     if (dbUser) return res.status(503).send(`User already registered please login instead`)
     const userCreated = await userService.createUser(req.body);
