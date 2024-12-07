@@ -91,14 +91,18 @@ const createAppDirectory = async (user,dbAppPort) => {
     createSupervisorcltAPPConfigFile(dbAppPort, `dc_${user.profileId}`, dbAppPort) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
+
+    //TODO:----- disable temporaly do to server performance issue
+    // await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    await linuxExecSample(`supervisorctl add web_${dbAppPort}`, `start new service just added from new config file`)
+    //TODO:----- disable temporaly do to server performance issue
+    // await linuxExecSample(`supervisorctl add web_${dbAppPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
     // ***** add allow port to ufw  *****
-    await linuxExecSample(`sudo ufw allow ${dbAppPort}/tcp`, `allow access port to ufw firewall`)
+    //TODO:----- disable temporaly do to server performance issue
+    // await linuxExecSample(`sudo ufw allow ${dbAppPort}/tcp`, `allow access port to ufw firewall`)
 
 
 }
