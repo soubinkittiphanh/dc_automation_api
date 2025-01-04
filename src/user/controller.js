@@ -35,7 +35,16 @@ const userController = {
     const { profileId, profileName, profileProvider, isActive } = req.body;
     try {
       const dbUser = await userService.getUserByProfileId(profileId);
-      let registerStatus = 201;
+      if (dbUser) return res.status(202).json(dbUser);
+      const newUser = await user.create({
+        profileId,
+        profileName,
+        profileProvider,
+        isActive,
+      });
+      res.status(201).json(newUser);
+      /*   old logic
+      // let registerStatus = 201;
       if (dbUser) {
         if (dbUser.company) {
           logger.info(`Customer already register completed`)
@@ -55,6 +64,7 @@ const userController = {
         isActive,
       });
       res.status(201).json(newUser);
+      */
     } catch (error) {
       logger.error(error);
       res.status(500).json({ error: `Internal Server Error ${error}` });
@@ -105,7 +115,7 @@ const userController = {
     const { profileId, profileName, profileProvider, isActive } = req.body;
     logger.info(`User payload ${JSON.stringify(req.body)}`);
     // return res.status(200).send(req.body);
- 
+
     const dbUser = await userService.getUserByProfileId(profileId);
     if (dbUser) return res.status(503).send(`User already registered please login instead`)
     const userCreated = await userService.createUser(req.body);
@@ -124,7 +134,9 @@ const userController = {
     }
     const dbUser = await userService.getUserByProfileId(printerSerialNo);
     logger.info(`Validating data finish ${dbUser}`)
-    if (dbUser) return res.status(503).send(`User already registered please login instead`)
+    // TODO:
+    // Change the logic if user available here only we will allow, otherwise we will not allow
+    if (!dbUser) return res.status(503).send(`Printer serial is not available from allow printer list`)
     // const userCreated = await userService.createUser();
     res.status(200).send('unregister device');
   }

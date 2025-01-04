@@ -2825,3 +2825,61 @@
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2024-11-21T07:13:35.213Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2024-11-21T07:13:37.285Z"}
 {"level":"info","message":"Datatase client is synchronize","timestamp":"2024-11-21T07:13:37.788Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2025-01-04T08:47:55.202Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2025-01-04T08:47:55.204Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-01-04T08:47:55.205Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2025-01-04T08:47:55.206Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2025-01-04T08:47:55.206Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2025-01-04T08:47:56.067Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2025-01-04T08:47:56.068Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-04T08:47:56.069Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2025-01-04T08:47:57.395Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-04T08:48:02.536Z"}
+{"level":"info","message":"User found {\"id\":6,\"profileId\":\"12345123123\",\"profileName\":\"JohnDoeProfile\",\"profileProvider\":\"ExampleProvider\",\"isActive\":true,\"createdAt\":\"2025-01-04T08:48:56.000Z\",\"updateTimestamp\":\"2025-01-04T08:48:56.000Z\",\"company\":null}","timestamp":"2025-01-04T16:30:09.559Z"}
+{"level":"warn","message":"Customer already register not yet 100% completed","timestamp":"2025-01-04T16:30:09.567Z"}
+{"level":"info","message":"User found {\"id\":6,\"profileId\":\"12345123123\",\"profileName\":\"JohnDoeProfile\",\"profileProvider\":\"ExampleProvider\",\"isActive\":true,\"createdAt\":\"2025-01-04T08:48:56.000Z\",\"updateTimestamp\":\"2025-01-04T08:48:56.000Z\",\"company\":null}","timestamp":"2025-01-04T16:30:12.687Z"}
+{"level":"warn","message":"Customer already register not yet 100% completed","timestamp":"2025-01-04T16:30:12.687Z"}
+{"level":"info","message":"User found {\"id\":6,\"profileId\":\"12345123123\",\"profileName\":\"JohnDoeProfile\",\"profileProvider\":\"ExampleProvider\",\"isActive\":true,\"createdAt\":\"2025-01-04T08:48:56.000Z\",\"updateTimestamp\":\"2025-01-04T08:48:56.000Z\",\"company\":null}","timestamp":"2025-01-04T16:30:14.514Z"}
+{"level":"warn","message":"Customer already register not yet 100% completed","timestamp":"2025-01-04T16:30:14.515Z"}
+{"level":"error","message":"User not found with profileId 12345123123, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2025-01-04T16:30:55.674Z"}
+{"errors":[{"instance":{"createdAt":"2025-01-04T16:30:55.685Z","id":null,"isActive":true,"profileId":"12345123123","profileName":"JohnDoeProfile","profileProvider":"ExampleProvider","updateTimestamp":"2025-01-04T16:30:55.685Z"},"message":"profileId must be unique","origin":"DB","path":"profileId","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"12345123123"}],"fields":{"profileId":"12345123123"},"level":"error","name":"SequelizeUniqueConstraintError","original":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["12345123123","JohnDoeProfile","ExampleProvider",true,"2025-01-04 16:30:55.685","2025-01-04 16:30:55.685"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '12345123123' for key 'profileId'","sqlState":"23000"},"parent":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["12345123123","JohnDoeProfile","ExampleProvider",true,"2025-01-04 16:30:55.685","2025-01-04 16:30:55.685"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '12345123123' for key 'profileId'","sqlState":"23000"},"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","timestamp":"2025-01-04T16:30:55.764Z"}
+{"level":"error","message":"User not found with profileId 12345123123, error SequelizeDatabaseError: read ETIMEDOUT","timestamp":"2025-01-04T16:31:21.609Z"}
+{"errors":[{"instance":{"createdAt":"2025-01-04T16:31:21.619Z","id":null,"isActive":true,"profileId":"12345123123","profileName":"JohnDoeProfile","profileProvider":"ExampleProvider","updateTimestamp":"2025-01-04T16:31:21.619Z"},"message":"profileId must be unique","origin":"DB","path":"profileId","type":"unique violation","validatorArgs":[],"validatorKey":"not_unique","validatorName":null,"value":"12345123123"}],"fields":{"profileId":"12345123123"},"level":"error","name":"SequelizeUniqueConstraintError","original":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["12345123123","JohnDoeProfile","ExampleProvider",true,"2025-01-04 16:31:21.619","2025-01-04 16:31:21.619"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '12345123123' for key 'profileId'","sqlState":"23000"},"parent":{"code":"ER_DUP_ENTRY","errno":1062,"fatal":false,"name":"SqlError","parameters":["12345123123","JohnDoeProfile","ExampleProvider",true,"2025-01-04 16:31:21.619","2025-01-04 16:31:21.619"],"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","sqlMessage":"Duplicate entry '12345123123' for key 'profileId'","sqlState":"23000"},"sql":"INSERT INTO `user` (`id`,`profileId`,`profileName`,`profileProvider`,`isActive`,`createdAt`,`updateTimestamp`) VALUES (DEFAULT,?,?,?,?,?,?);","timestamp":"2025-01-04T16:31:21.663Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2025-01-04T16:32:48.448Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2025-01-04T16:32:48.451Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-01-04T16:32:48.452Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2025-01-04T16:32:48.452Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2025-01-04T16:32:48.453Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2025-01-04T16:32:49.210Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2025-01-04T16:32:49.211Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-04T16:32:49.212Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2025-01-04T16:32:49.410Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-04T16:32:50.383Z"}
+{"level":"info","message":"User found {\"id\":6,\"profileId\":\"12345123123\",\"profileName\":\"JohnDoeProfile\",\"profileProvider\":\"ExampleProvider\",\"isActive\":true,\"createdAt\":\"2025-01-04T08:48:56.000Z\",\"updateTimestamp\":\"2025-01-04T08:48:56.000Z\",\"company\":null}","timestamp":"2025-01-04T16:33:03.114Z"}
+{"level":"error","timestamp":"2025-01-04T16:33:03.117Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2025-01-04T16:34:02.135Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2025-01-04T16:34:02.137Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-01-04T16:34:02.138Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2025-01-04T16:34:02.138Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2025-01-04T16:34:02.139Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2025-01-04T16:34:03.722Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2025-01-04T16:34:03.724Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-04T16:34:03.725Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2025-01-04T16:34:03.908Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-04T16:34:04.985Z"}
+{"level":"info","message":"User found {\"id\":6,\"profileId\":\"12345123123\",\"profileName\":\"JohnDoeProfile\",\"profileProvider\":\"ExampleProvider\",\"isActive\":true,\"createdAt\":\"2025-01-04T08:48:56.000Z\",\"updateTimestamp\":\"2025-01-04T08:48:56.000Z\",\"company\":null}","timestamp":"2025-01-04T16:34:13.006Z"}
+{"level":"info","message":"User found {\"id\":7,\"profileId\":\"123123\",\"profileName\":\"TEST\",\"profileProvider\":\"provider\",\"isActive\":true,\"createdAt\":\"2025-01-04T16:26:59.000Z\",\"updateTimestamp\":\"2025-01-04T16:26:59.000Z\",\"company\":null}","timestamp":"2025-01-04T16:36:26.976Z"}
+{"level":"info","message":"User found {\"id\":7,\"profileId\":\"123123\",\"profileName\":\"TEST\",\"profileProvider\":\"provider\",\"isActive\":true,\"createdAt\":\"2025-01-04T16:26:59.000Z\",\"updateTimestamp\":\"2025-01-04T16:26:59.000Z\",\"company\":null}","timestamp":"2025-01-04T16:36:32.094Z"}
+{"level":"info","message":"User found {\"id\":7,\"profileId\":\"123123\",\"profileName\":\"TEST\",\"profileProvider\":\"provider\",\"isActive\":true,\"createdAt\":\"2025-01-04T16:26:59.000Z\",\"updateTimestamp\":\"2025-01-04T16:26:59.000Z\",\"company\":null}","timestamp":"2025-01-04T16:36:32.108Z"}
+{"level":"info","message":"User found {\"id\":7,\"profileId\":\"123123\",\"profileName\":\"TEST\",\"profileProvider\":\"provider\",\"isActive\":true,\"createdAt\":\"2025-01-04T16:26:59.000Z\",\"updateTimestamp\":\"2025-01-04T16:26:59.000Z\",\"company\":null}","timestamp":"2025-01-04T16:36:47.137Z"}
+{"level":"info","message":"User found {\"id\":7,\"profileId\":\"123123\",\"profileName\":\"TEST\",\"profileProvider\":\"provider\",\"isActive\":true,\"createdAt\":\"2025-01-04T16:26:59.000Z\",\"updateTimestamp\":\"2025-01-04T16:26:59.000Z\",\"company\":null}","timestamp":"2025-01-04T16:39:33.931Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2025-01-04T16:45:55.394Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2025-01-04T16:45:55.397Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-01-04T16:45:55.398Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2025-01-04T16:45:55.399Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2025-01-04T16:45:55.399Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2025-01-04T16:45:56.238Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2025-01-04T16:45:56.239Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-04T16:45:56.240Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2025-01-04T16:45:56.458Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-04T16:45:57.388Z"}
