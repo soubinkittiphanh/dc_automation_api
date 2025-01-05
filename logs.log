@@ -2883,3 +2883,31 @@
 {"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-04T16:45:56.240Z"}
 {"level":"info","message":"client_db Connection established","timestamp":"2025-01-04T16:45:56.458Z"}
 {"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-04T16:45:57.388Z"}
+{"level":"info","message":"Hello, Winston!","timestamp":"2025-01-05T03:28:53.147Z"}
+{"level":"warn","message":"This is a warning message.","timestamp":"2025-01-05T03:28:53.149Z"}
+{"level":"error","message":"This is an error message.","timestamp":"2025-01-05T03:28:53.150Z"}
+{"level":"info","message":"This is an information message.","timestamp":"2025-01-05T03:28:53.150Z"}
+{"ip":"192.168.1.1","level":"info","message":"User logged in","timestamp":"2025-01-05T03:28:53.151Z","username":"johndoe"}
+{"level":"info","message":"Dcommerce is up","timestamp":"2025-01-05T03:28:53.711Z"}
+{"level":"info","message":"app is runing: 8001","timestamp":"2025-01-05T03:28:53.712Z"}
+{"level":"warn","message":"env: dc_spf_uat","timestamp":"2025-01-05T03:28:53.714Z"}
+{"level":"info","message":"client_db Connection established","timestamp":"2025-01-05T03:28:53.923Z"}
+{"level":"info","message":"Datatase client is synchronize","timestamp":"2025-01-05T03:28:55.036Z"}
+{"level":"info","message":"Validating data TESTIT","timestamp":"2025-01-05T03:31:46.796Z"}
+{"level":"info","message":"Validating data finish null","timestamp":"2025-01-05T03:31:46.931Z"}
+{"level":"info","message":"Validating data TESTIT","timestamp":"2025-01-05T03:32:29.577Z"}
+{"level":"info","message":"User found {\"id\":12,\"profileId\":\"TESTIT\",\"profileName\":\"testit \",\"profileProvider\":\"testit\",\"isActive\":true,\"createdAt\":\"2025-01-05T03:32:17.000Z\",\"updateTimestamp\":\"2025-01-05T03:32:17.000Z\",\"company\":null}","timestamp":"2025-01-05T03:32:29.617Z"}
+{"level":"info","message":"Validating data finish [object SequelizeInstance:user]","timestamp":"2025-01-05T03:32:29.618Z"}
+{"level":"info","message":"User payload {\"id\":null,\"profileId\":\"TESTIT\",\"profileName\":\"testit\",\"profileProvider\":\"MOBILE AUTO REGISTER\",\"isActive\":true,\"companyProfile\":{\"companyName\":\"testit\",\"companyEmail\":\"mail\",\"companyTelephone\":\"020285885848\",\"systemPackage\":\"FREE\",\"apiLink\":\"apiLink\",\"appLink\":\"appLink\",\"appPort\":3900,\"apiPort\":8900,\"db\":\"\",\"isActive\":true}}","timestamp":"2025-01-05T03:32:46.245Z"}
+{"level":"info","message":"User found {\"id\":12,\"profileId\":\"TESTIT\",\"profileName\":\"testit \",\"profileProvider\":\"testit\",\"isActive\":true,\"createdAt\":\"2025-01-05T03:32:17.000Z\",\"updateTimestamp\":\"2025-01-05T03:32:17.000Z\",\"company\":null}","timestamp":"2025-01-05T03:32:46.278Z"}
+{"level":"info","message":"User found {\"id\":12,\"profileId\":\"TESTIT\",\"profileName\":\"testit \",\"profileProvider\":\"testit\",\"isActive\":true,\"createdAt\":\"2025-01-05T03:32:17.000Z\",\"updateTimestamp\":\"2025-01-05T03:32:17.000Z\",\"company\":null}","timestamp":"2025-01-05T03:32:46.342Z"}
+{"level":"info","message":"Company profile before insert {\"companyName\":\"testit\",\"companyEmail\":\"mail\",\"companyTelephone\":\"020285885848\",\"systemPackage\":\"FREE\",\"apiLink\":\"apiLink\",\"appLink\":\"appLink\",\"appPort\":3904,\"apiPort\":8904,\"db\":\"dcommerce_pro_auto_TESTIT\",\"isActive\":true,\"userId\":12}","timestamp":"2025-01-05T03:32:46.382Z"}
+{"level":"warn","message":"Company profile data \n{\"companyName\":\"testit\",\"companyEmail\":\"mail\",\"companyTelephone\":\"020285885848\",\"systemPackage\":\"FREE\",\"apiLink\":\"apiLink\",\"appLink\":\"appLink\",\"appPort\":3904,\"apiPort\":8904,\"db\":\"dcommerce_pro_auto_TESTIT\",\"isActive\":true,\"userId\":12}","timestamp":"2025-01-05T03:32:46.383Z"}
+{"level":"info","message":"Finall appport: 3904 apiport: 8904","timestamp":"2025-01-05T03:32:46.448Z"}
+{"level":"info","message":"Finall new user: {\"id\":12,\"profileId\":\"TESTIT\",\"profileName\":\"testit \",\"profileProvider\":\"testit\",\"isActive\":true,\"createdAt\":\"2025-01-05T03:32:17.000Z\",\"updateTimestamp\":\"2025-01-05T03:32:17.000Z\",\"company\":null}","timestamp":"2025-01-05T03:32:46.450Z"}
+{"level":"error","message":"Cannot Create api directory Error: Command failed: mkdir -p /root/api/dc_TESTIT\nmkdir: /root: Read-only file system\n","timestamp":"2025-01-05T03:32:46.814Z"}
+{"level":"error","message":"Cannot Copy api project to directory api Error: Command failed: cp -r /root/api/dc_api_draft/* /root/api/dc_TESTIT\ncp: /root/api/dc_api_draft/*: No such file or directory\n","timestamp":"2025-01-05T03:32:46.937Z"}
+{"level":"error","message":"Cannot Create mariadb database Error: Command failed: mysql -u root -e \"CREATE DATABASE dcommerce_pro_auto_TESTIT;\"\nERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)\n","timestamp":"2025-01-05T03:32:47.766Z"}
+{"level":"error","message":"Error creating file /root/api/dc_TESTIT/src/config/dbClient.js: ENOENT: no such file or directory, open '/root/api/dc_TESTIT/src/config/dbClient.js'","timestamp":"2025-01-05T03:32:47.768Z"}
+{"level":"error","message":"Cannot complete registration trail Error: ENOENT: no such file or directory, open '/root/api/dc_TESTIT/src/config/dbClient.js'","timestamp":"2025-01-05T03:32:47.790Z"}
+{"level":"warn","message":"User created undefined","timestamp":"2025-01-05T03:32:47.791Z"}

@@ -15,13 +15,16 @@ const service = {
             try {
                 const result = await sequelize.transaction(async (t) => {
                     // ************ Create user record *************
+                    /*
                     let newUser = await User.create({
                         profileId,
                         profileName,
                         profileProvider,
                         isActive,
                     }, { transaction: t });
+                    */
 
+                    let newUser = await service.getUserByProfileId(profileId);
                     // ************ Create app port record *************
                     // Default port app: 3900, api: 8900
                     //  api port range between 8900 - 8999

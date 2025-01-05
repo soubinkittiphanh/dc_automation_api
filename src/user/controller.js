@@ -117,7 +117,7 @@ const userController = {
     // return res.status(200).send(req.body);
 
     const dbUser = await userService.getUserByProfileId(profileId);
-    if (dbUser) return res.status(503).send(`User already registered please login instead`)
+    if (!dbUser) return res.status(503).send(`Printer serial is not allow / please request admin to add printer to allow list`)
     const userCreated = await userService.createUser(req.body);
     res.status(201).json(userCreated);
   },
