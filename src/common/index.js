@@ -56,11 +56,13 @@ const createApiDirectory = async (user, dbApiPort, companyProfile) => {
     // Wait for 10 seconds before proceeding
     await new Promise(resolve => setTimeout(resolve, 10000));
     // TODO: Insert company data here from object (companyProfile)
-
+    const sqlStatementClearDraftCompany =
+        `TRUNCATE TABLE company;`
     const sqlStatement =
         `INSERT INTO company (mnemonic, name, tel, email, address, province, district, village, remark, isActive, createdAt, updateTimestamp) 
     VALUES ('BANK', '${companyProfile.companyName}', '${companyProfile.companyTelephone}', '${companyProfile.companyEmail}', '123 Main St', 'SomeProvince', 'SomeDistrict', 'SomeVillage', 'This is a remark', 1, NOW(), NOW());`;
 
+    await linuxExecSample(`mysql -u root -D ${generatedDb} -e "${sqlStatementClearDraftCompany}"`, `Clear draft company data`);
     await linuxExecSample(`mysql -u root -D ${generatedDb} -e "${sqlStatement}"`, `Company profile sync`);
 
 
