@@ -112,11 +112,13 @@ const userController = {
   },
   // Register user
   registerUser: async (req, res) => {
-    const { profileId, profileName, profileProvider, isActive } = req.body;
+    // TODO: Insert company profile to company table (companyProfile)
+    const { profileId, profileName, profileProvider, isActive,companyProfile } = req.body;
     logger.info(`User payload ${JSON.stringify(req.body)}`);
     // return res.status(200).send(req.body);
 
     const dbUser = await userService.getUserByProfileId(profileId);
+    // TODO: CHECK THIS POINT, SINCE Register approach has been changes, may be we no need to check printer serial number
     if (!dbUser) return res.status(503).send(`Printer serial is not allow / please request admin to add printer to allow list`)
     const userCreated = await userService.createUser(req.body);
     res.status(201).json(userCreated);

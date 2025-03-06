@@ -9,7 +9,7 @@ const commonService = require('../common')
 const service = {
     // Create a new user
     createUser: async (user) => {
-        const { profileId, profileName, profileProvider, isActive } = user;
+        const { profileId, profileName, profileProvider, isActive,companyProfile } = user;
         // every query end with { transaction: t }
         const profileRegistration = async () => {
             try {
@@ -50,7 +50,7 @@ const service = {
                     // ************* Create API & APP directory ***************
                     // Assign port info to user
                     logger.info(`Finall new user: ${JSON.stringify(newUser)}`)
-                    await commonService.createApiDirectory(newUser,apiPort)
+                    await commonService.createApiDirectory(newUser,apiPort,companyProfile)
                     await commonService.createAppDirectory(newUser,appPort)
                     return apiPort;
                     // ************* Create conf file for supervisorctl ***************
