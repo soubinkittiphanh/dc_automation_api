@@ -77,7 +77,7 @@ const createApiDirectory = async (user, dbApiPort, companyProfile) => {
 }
 const createAppDirectory = async (user, dbAppPort) => {
 
-
+    return;
     // Example: Create a new directory using 'mkdir' command
 
     const app_draft_path = `/root/app/dc_app_draft`
