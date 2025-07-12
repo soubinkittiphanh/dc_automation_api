@@ -46,10 +46,10 @@ const createApiDirectory = async (user, dbApiPort, companyProfile) => {
     createSupervisorcltAPIConfigFile(dbApiPort, `dc_${user.profileId}`) // Create supervisorclt config file for API 
 
     // ***** Read api config file (Supervisorctl config file) *****
-    // await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
+    await linuxExecSample(`supervisorctl reread`, `read config file in supervisor config path`)
 
     // ***** Add api config file (Supervisorctl config file) *****
-    // await linuxExecSample(`supervisorctl add api_${dbApiPort}`, `start new service just added from new config file`)
+    await linuxExecSample(`supervisorctl add api_${dbApiPort}`, `start new service just added from new config file`)
     // ***** API will start automatically *****
 
     // ***** Create company info *****
